@@ -1,0 +1,18 @@
+<h1>Les Parcs</h1>
+<div class="p-grid">
+    <div *ngFor="let parc of parcs" class="p-col-4">
+        <p-card>
+            <ng-template pTemplate="header">
+                <p>{{parc.nom}}</p>
+            </ng-template>
+            <p>{{parc.capacite}}</p>
+            <ng-template pTemplate="footer">
+                <button (click)="delete(parc)">Supprimer</button>
+                <button (click)="voir(parc.id)">Voir</button>
+            </ng-template>
+        </p-card>
+        
+    </div>
+</div>
+
+<button (click)="create()">Ajouter</button>
